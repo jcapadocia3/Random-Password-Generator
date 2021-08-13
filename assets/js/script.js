@@ -28,6 +28,14 @@ if (!passwordLength === true) {
   confirmLower = confirm("Will your password contain lower case letters? 'Okay' means yes. 'Cancel' means no.");
 }
 
+if (confirmNum === false  && confirmSpec === false && confirmUpper === false && confirmLower === false) {
+  console.log("This won't work!");
+} else if (confirmNum === true && confirmSpec === true && confirmUpper === true && confirmLower === true){
+  console.log("This works!")
+} else {
+  console.log("test");
+}
+
 };
 
 
