@@ -11,6 +11,7 @@ var confirmUpper;
 var confirmLower;
 
 
+function generatePassword() {
 
     passwordLength = prompt("Let's setup a secured, randomly generated, password for you! Please enter between 8-128 characters to determine how long you want your password to be.");
     
@@ -27,6 +28,7 @@ if (!passwordLength === true) {
   confirmLower = confirm("Will your password contain lower case letters? 'Okay' means yes. 'Cancel' means no.");
 }
 
+};
 
 
 // Write password to the #password input
