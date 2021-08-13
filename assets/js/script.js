@@ -68,6 +68,26 @@ if (confirmNum === false  && confirmSpec === false && confirmUpper === false && 
   userSelect = (lowerChar)
 }
 
+var password = ""
+
+console.log(userSelect)
+for (var i = 0; i < passwordLength; i++) {
+  var lengthOfString = userSelect.length
+  console.log(lengthOfString)
+  var randomDecimalNumber = Math.random()
+  console.log(randomDecimalNumber)
+  var randomNumber = randomDecimalNumber * lengthOfString
+  console.log(randomNumber)
+  var randomNumberRoundedDown = Math.floor(randomNumber)
+  console.log(randomNumberRoundedDown)
+  var pickedChoice = userSelect[randomNumberRoundedDown]
+  console.log(pickedChoice)
+  password += pickedChoice
+  console.log(password)
+}
+
+return password
+
 };
 
 
