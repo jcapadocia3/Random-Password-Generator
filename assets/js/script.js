@@ -9,6 +9,7 @@ var confirmNum;
 var confirmSpec;
 var confirmUpper;
 var confirmLower;
+var userSelect;
 
 
 function generatePassword() {
@@ -29,37 +30,42 @@ if (!passwordLength === true) {
 }
 
 if (confirmNum === false  && confirmSpec === false && confirmUpper === false && confirmLower === false) {
-  console.log("This won't work!");
+  alert("Please start over and enter the required criteria.");
 } else if (confirmNum === true && confirmSpec === true && confirmUpper === true && confirmLower === true) {
-  console.log("This works!")
+  userSelect = numberChar.concat(specialChar, upperChar, lowerChar)
+  console.log("test that this works")
 } else if (confirmNum === true && confirmSpec === true && confirmUpper === true && confirmLower === false) {
-  console.log("test");
+  userSelect = numberChar.concat(specialChar, upperChar)
+  console.log("im only using 3 characters")
 } else if (confirmNum === true && confirmSpec === true && confirmUpper === false && confirmLower === true) {
-  console.log("test");
+  userSelect = numberChar.concat(specialChar, lowerChar)
+  console.log("im using 3 different characters")
 } else if (confirmNum === true && confirmSpec === false && confirmUpper === true && confirmLower === true) {
-  console.log("test");
+  userSelect = numberChar.concat(upperChar, lowerChar)
 } else if (confirmNum === false && confirmSpec === true && confirmUpper === true && confirmLower === true) {
-  console.log("test");
+  userSelect = specialChar.concat(upperChar, lowerChar)
 } else if (confirmNum === true && confirmSpec === true && confirmUpper === false && confirmLower === false) {
-  console.log("test");
+  userSelect = numberChar.concat(specialChar)
+  console.log("im using 2 characters")
 } else if (confirmNum === false && confirmSpec === false && confirmUpper === true && confirmLower === true) {
-  console.log("test");
+  userSelect = upperChar.concat(lowerChar)
 } else if (confirmNum === true && confirmSpec === false && confirmUpper === false && confirmLower === true) {
-  console.log("test");
+  userSelect = numberChar.concat(lowerChar)
 } else if (confirmNum === true && confirmSpec === false && confirmUpper === true && confirmLower === false) {
-  console.log("test");
+  userSelect = numberChar.concat(upperChar)
 } else if (confirmNum === false && confirmSpec === true && confirmUpper === false && confirmLower === true) {
-  console.log("test");
+  userSelect = specialChar.concat(lowerChar)
 } else if (confirmNum === false && confirmSpec === true && confirmUpper === true && confirmLower === false) {
-  console.log("test");
+  userSelect = specialChar.concat(upperChar)
 } else if (confirmNum === true && confirmSpec === false && confirmUpper === false && confirmLower === false) {
-  console.log("test");
+  userSelect = (numberChar)
+  console.log("im using only 1 character")
 } else if (confirmNum === false && confirmSpec === true && confirmUpper === false && confirmLower === false) {
-  console.log("test");
+  userSelect = (specialChar)
 } else if (confirmNum === false && confirmSpec === false && confirmUpper === true && confirmLower === false) {
-  console.log("test");
+  userSelect = (upperChar)
 } else if (confirmNum === false && confirmSpec === false && confirmUpper === false && confirmLower === true) {
-  console.log("test");
+  userSelect = (lowerChar)
 }
 
 };
